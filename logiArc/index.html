@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogiArch by Cathei Basilio : Portfolio</title>
+    <title>LogiArc | Specialized Digital Development House</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,10 +12,17 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0B0F19',
-                            card: '#111827',
-                            accent: '#3B82F6',
-                            glow: '#60A5FA'
+                            dark: '#050505',
+                            card: '#121212',
+                            accent: '#2563EB',
+                            glow: '#60A5FA',
+                            blue: '#0284c7',
+                            magenta: '#db2777',
+                            amber: '#d97706',
+                            green: '#16a34a',
+                            red: '#dc2626',
+                            purple: '#9333ea',
+                            teal: '#0d9488'
                         }
                     }
                 }
@@ -23,21 +30,58 @@
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* CFOTech style slanted badge logo */
+    .logiarc-logo {
+        display: inline-flex;
+        align-items: center;
+        background: #0284c7;
+        position: relative;
+        padding: 6px 16px 6px 14px;
+        font-weight: 800;
+        font-family: system-ui, -apple-system, sans-serif;
+        letter-spacing: -0.025em;
+        overflow: hidden;
+    }
+    .logiarc-logo::after {
+        content: '';
+        position: absolute;
+        right: -18px;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        background: #38bdf8;
+        transform: skewX(-20deg);
+    }
+    .logiarc-logo .text-white {
+        position: relative;
+        z-index: 2;
+    }
+    .logiarc-logo .text-accent-light {
+        position: relative;
+        z-index: 2;
+        color: #bae6fd;
+    }
+</style>
+
 </head>
 <body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-accent selection:text-white">
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/85 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-brand-accent animate-pulse"></span>
-                Catherine Basilio
+            <a href="#" class="flex items-center gap-3">
+                <div class="logiarc-logo text-lg shadow-md">
+                    <span class="text-white">Logi</span><span class="text-accent-light">Arc</span>
+                </div>
+                <span class="hidden sm:inline-block text-xs text-gray-400 font-normal border-l border-gray-800 pl-3">Digital Development House</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                <a href="#expertise" class="hover:text-brand-accent transition">Expertise</a>
-                <a href="#experience" class="hover:text-brand-accent transition">Experience & Ventures</a>
-                <a href="#yahoo-carousel" class="hover:text-brand-accent transition">Yahoo Web Fronts</a>
-                <a href="#global" class="hover:text-brand-accent transition">Global Impact</a>
+                <a href="#capabilities" class="hover:text-brand-accent transition">Capabilities</a>
+                <a href="#impact" class="hover:text-brand-accent transition">Incubation & Impact</a>
+                <a href="#yahoo-carousel" class="hover:text-brand-accent transition">Engineering Heritage</a>
+                <a href="#pedigree" class="hover:text-brand-accent transition">Leadership</a>
             </div>
             <a href="https://www.linkedin.com/in/cmecholz/" target="_blank" class="bg-brand-accent hover:bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg shadow-blue-500/20">
                 <i class="fab fa-linkedin-in mr-2"></i> Connect
@@ -51,75 +95,172 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                    Enterprise Systems & Digital Architecture
+                    Specialized Digital Development House
                 </div>
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                    Building the Infrastructure of Digital Scale.
+                    High-Performance Digital Products for High-Stakes Businesses.
                 </h1>
                 <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
-                    Decades of hands-on engineering, architectural leadership, and greenfield venture building across global tech leaders and institutional banking.
+                    We design, build, and scale mission-critical web platforms and digital ecosystems. Backed by award-winning fintech innovation, multi-hub supply chain systems, and bulletproof reliability for hospitality and health tech.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#yahoo-carousel" class="bg-white text-brand-dark hover:bg-gray-200 px-7 py-3.5 rounded-xl font-semibold transition shadow-md">
-                        View Yahoo Work
+                    <a href="#impact" class="bg-white text-brand-dark hover:bg-gray-200 px-7 py-3.5 rounded-xl font-semibold transition shadow-md">
+                        Review Proven Track Record
                     </a>
                     <a href="https://www.linkedin.com/in/cmecholz/" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white border border-gray-700 px-7 py-3.5 rounded-xl font-semibold transition">
-                        View LinkedIn Profile
+                        Leadership Profile
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Core Expertise Areas -->
-    <section id="expertise" class="py-24 bg-brand-dark">
+    <!-- Core Capabilities Infographic Grid (Vibrant TechDay Style) -->
+    <section id="capabilities" class="py-24 bg-brand-dark">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Technical Competencies</h2>
-                <p class="text-gray-400">Core architectural disciplines driving resilient, high-performance global systems.</p>
+                <span class="text-white text-xs font-bold uppercase tracking-wider bg-blue-600 px-3 py-1 rounded-full">Institutional Standards</span>
+                <h2 class="text-3xl font-bold tracking-tight text-white mt-4 mb-3">Venture-Tested Engineering Credibility</h2>
+                <p class="text-gray-400 text-sm">Eliminate technical risk. Our development methodology is forged in sectors where failure is structurally impossible.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent/50 transition group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-cubes text-xl"></i>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Fintech (Blue) -->
+                <div class="bg-sky-600 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:scale-[1.02] transition duration-300 text-white">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="bg-black/30 text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-wider uppercase">Award Winning</span>
+                            <i class="fas fa-award text-2xl text-white/90"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold tracking-tight mb-2">Fintech & Digital Assets</h3>
+                        <p class="text-sky-100 text-xs leading-relaxed">
+                            Architecting high-security digital currency frameworks and DeFi rails, bringing cryptographic safety and zero-trust transaction isolation to client builds.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Enterprise Architecture & Digital</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Leading payments and institutional architecture at enterprise scale, ensuring multi-tenant reliability, secure integrations, and fault-tolerant infrastructure.
-                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/20 text-xs font-semibold flex items-center justify-between">
+                        <span>Zero CDE Exposure</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent/50 transition group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-bolt text-xl"></i>
+                <!-- Card 2: Supply Chain (Magenta/Pink) -->
+                <div class="bg-pink-600 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:scale-[1.02] transition duration-300 text-white">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="bg-black/30 text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-wider uppercase">Ecosystems</span>
+                            <i class="fas fa-network-wired text-2xl text-white/90"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold tracking-tight mb-2">Supply Chain & ESG</h3>
+                        <p class="text-pink-100 text-xs leading-relaxed">
+                            Building bank-agnostic supply chain platforms and enterprise ESG tracking portals designed to handle heavy multi-hub data streams effortlessly.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">High-Performance Edge & AI</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Designing low-latency edge solutions, distributed AI systems, and optimized execution environments for real-time transactional workloads.
-                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/20 text-xs font-semibold flex items-center justify-between">
+                        <span>Multi-Hub Architecture</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent/50 transition group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-chart-line text-xl"></i>
+                <!-- Card 3: Performance (Amber/Orange) -->
+                <div class="bg-amber-600 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:scale-[1.02] transition duration-300 text-white">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="bg-black/30 text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-wider uppercase">Speed & Scale</span>
+                            <i class="fas fa-bolt text-2xl text-white/90"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold tracking-tight mb-2">Edge-Native Performance</h3>
+                        <p class="text-amber-100 text-xs leading-relaxed">
+                            Bypassing legacy PHP/MySQL bottlenecks. Serving pre-rendered static assets via global edge CDNs (AWS/Fastly) for mobile speeds under 2.2 seconds.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Venture Building & Fintech</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Incubating zero-to-one financial technology ventures, scaling greenfield architecture, and bridging banking systems with agile innovation.
-                    </p>
+                    <div class="mt-8 pt-4 border-t border-white/20 text-xs font-semibold flex items-center justify-between">
+                        <span>&lt;2.2s Load Benchmark</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sovereignty (Emerald Green) -->
+                <div class="bg-emerald-600 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:scale-[1.02] transition duration-300 text-white">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="bg-black/30 text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-wider uppercase">Sovereignty</span>
+                            <i class="fas fa-key text-2xl text-white/90"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold tracking-tight mb-2">100% IP Transfer</h3>
+                        <p class="text-emerald-100 text-xs leading-relaxed">
+                            Zero vendor lock-in or proprietary black boxes. Complete ownership of the codebase, design systems, and infrastructure transfers entirely upon completion.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/20 text-xs font-semibold flex items-center justify-between">
+                        <span>Zero Lock-In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Yahoo Web Fronts Carousel Section -->
-    <section id="yahoo-carousel" class="py-24 bg-gray-900/60 border-t border-b border-gray-800/60">
+    <!-- Incubation & Execution Track Record -->
+    <section id="impact" class="py-24 bg-gray-900/50 border-t border-b border-gray-800/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-yellow-400 text-xs font-bold uppercase tracking-wider bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">Yahoo Software Engineering & UI Design</span>
+                <span class="text-brand-accent text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Venture Incubation & Execution</span>
+                <h2 class="text-3xl font-bold tracking-tight text-white mt-4 mb-3">From Zero to Commercial Product</h2>
+                <p class="text-gray-400 text-sm">Proving deep domain expertise in taking high-stakes hospitality, health tech, and sustainable realty ventures (such as Huma and Autumn) from inception to commercial scale and VC divestment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Hospitality Incubation & Destination Scale -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">Hospitality & Resorts</span>
+                            <span class="text-gray-400 text-xs">Destination Experience</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Zero-to-Commercial Scale in Hospitality</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Drawing from extensive venture-building experience taking sustainable realty and hospitality platforms (e.g., Huma) from ideation through commercialization, we understand destination scale. For properties navigating critical operational shifts—such as Del Rio Riverside Resort managing executive leadership changes—we engineer edge-native architectures backed by enterprise 99.99% uptime SLAs and seamless booking integrations.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-800 pt-4 flex items-center justify-between text-xs text-gray-400">
+                        <span><i class="fas fa-check text-brand-accent mr-1"></i> NewBook PMS Integration</span>
+                        <span><i class="fas fa-check text-brand-accent mr-1"></i> WCAG 2.1 AA Accessible</span>
+                    </div>
+                </div>
+
+                <!-- Health Tech Incubation & Regulated Scale -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20">Health Tech Incubation</span>
+                            <span class="text-gray-400 text-xs">Regulated Commercial Products</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Incubating Health Tech from 0 to Market</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Proven experience leading the zero-to-one commercial incubation of health tech and insurtech platforms (such as Autumn) where failure is not an option. We enforce rigorous zero-trust data boundaries, tokenized API separation, and enterprise compliance architectures that safeguard patient trust and satisfy the highest medical and regulatory standards.
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-800 pt-4 flex items-center justify-between text-xs text-gray-400">
+                        <span><i class="fas fa-check text-brand-accent mr-1"></i> Tokenized API Security</span>
+                        <span><i class="fas fa-check text-brand-accent mr-1"></i> PCI-DSS Aligned Governance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Venture Disclosure Note -->
+            <div class="mt-12 max-w-5xl mx-auto bg-blue-950/30 border border-blue-500/30 rounded-xl p-5 text-center text-xs text-blue-200/80 leading-relaxed">
+                <i class="fas fa-info-circle mr-1 text-blue-400"></i> <strong class="text-white">Confidentiality Note:</strong> Institutional venture assets across ~30 enterprise supply chain networks — were successfully incubated through commercial divestment. Proprietary internal interfaces are restricted under strict NDA governance
+            </div>
+        </div>
+    </section>
+
+    <!-- Yahoo Web Fronts Carousel Section -->
+    <section id="yahoo-carousel" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-yellow-400 text-xs font-bold uppercase tracking-wider bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">Technical Heritage</span>
                 <h2 class="text-3xl font-bold tracking-tight text-white mt-4 mb-3">Yahoo Web Fronts & Custom Brand Products</h2>
-                <p class="text-gray-400 text-sm">Interactive showcase of high-scale portals, engagement microsites, and regional web fronts engineered during my tenure at Yahoo.</p>
+                <p class="text-gray-400 text-sm">Interactive archive of high-scale regional portals, engagement microsites, and front-end architectures engineered during foundational engineering roles.</p>
             </div>
 
             <!-- Carousel Container -->
@@ -130,7 +271,7 @@
                     <!-- Slide 1: Yahoo OMG Indonesia Index -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/01-indexpage.jpg" alt="Yahoo OMG Indonesia Index Page" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/01-indexpage.jpg" alt="Yahoo OMG Indonesia Index Page" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo OMG! Indonesia — Index Page</h3>
@@ -141,7 +282,7 @@
                     <!-- Slide 2: Yahoo OMG Indonesia Join Page -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/03-joinpage.jpg" alt="Yahoo OMG Indonesia Join Page" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/03-joinpage.jpg" alt="Yahoo OMG Indonesia Join Page" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo OMG! Indonesia — Contest Join Flow</h3>
@@ -152,18 +293,18 @@
                     <!-- Slide 3: Carlsberg Part of the Game -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/C1-part-of-the-game-2010.05.11b.jpg" alt="Carlsberg Part of the Game Yahoo Sports Singapore" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/C1-part-of-the-game-2010.05.11b.jpg" alt="Carlsberg Part of the Game Yahoo! Sports Singapore" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
-                            <h3 class="text-white font-bold text-lg">Yahoo Sports Singapore — Carlsberg "Part of the Game"</h3>
+                            <h3 class="text-white font-bold text-lg">Yahoo! Sports Singapore — Carlsberg "Part of the Game"</h3>
                             <p class="text-gray-400 text-xs mt-1">Custom branded sports microsite and interactive avatar builder interface.</p>
                         </div>
                     </div>
 
-                    <!-- Slide 4: College Hoops Yahoo Philippines -->
+                    <!-- Slide 4: College Hoops Yahoo! Philippines -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/College Hoops - Yahoo! Philippines.jpg" alt="College Hoops Yahoo Philippines" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/College Hoops - Yahoo! Philippines.jpg" alt="College Hoops Yahoo! Philippines" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo! Philippines News — College Hoops Hub</h3>
@@ -174,7 +315,7 @@
                     <!-- Slide 5: Yahoo Games Malaysia -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/games_my.jpg" alt="Yahoo Games Malaysia" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/games_my.jpg" alt="Yahoo! Games Malaysia" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo! Games Malaysia Portal</h3>
@@ -185,7 +326,7 @@
                     <!-- Slide 6: Yahoo Games Singapore -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/games_sg.jpg" alt="Yahoo Games Singapore" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/games_sg.jpg" alt="Yahoo Games Singapore" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo! Games Singapore Portal</h3>
@@ -196,7 +337,7 @@
                     <!-- Slide 7: Hong Kong Babytalk -->
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex flex-col items-center justify-center p-4">
                         <div class="w-full h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden rounded-lg bg-gray-950 border border-gray-800">
-                            <img src="logiArc/assets/hk_babytalk.jpg" alt="Yahoo Hong Kong Babytalk" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
+                            <img src="assets/hk_babytalk.jpg" alt="Yahoo Hong Kong Babytalk" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" onclick="openModal(this.src)">
                         </div>
                         <div class="mt-4 text-center">
                             <h3 class="text-white font-bold text-lg">Yahoo! Hong Kong Babytalk (寶寶專家)</h3>
@@ -228,102 +369,53 @@
         </div>
     </section>
 
-    <!-- Professional Experience Timeline -->
-    <section id="experience" class="py-24 bg-brand-dark">
+    <!-- Professional Experience Foundation (Compact & Credible) -->
+    <section id="pedigree" class="py-24 bg-gray-900/50 border-t border-gray-800/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Professional Pedigree</h2>
-                <p class="text-gray-400">A track record of engineering excellence across global technology leaders.</p>
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Leadership & Technical Foundation</h2>
+                <p class="text-gray-400">The senior execution engine powering LogiArc, built across global tech leaders, venture incubation, and institutional banking.</p>
             </div>
 
-            <div class="space-y-8 max-w-4xl mx-auto">
+            <div class="space-y-6 max-w-4xl mx-auto">
                 <!-- ANZ / Current -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 relative">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                        <div>
-                            <span class="text-brand-accent text-xs font-bold uppercase tracking-wider">Current Role</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Lead Architect, Payments Tech - Insto</h3>
-                        </div>
-                        <span class="text-gray-400 text-sm font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">ANZ Bank • Melbourne</span>
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-brand-accent text-xs font-bold uppercase tracking-wider">Current Enterprise Role</span>
+                        <h3 class="text-lg font-bold text-white mt-0.5">Lead Architect, Payments Tech - Insto</h3>
+                        <p class="text-gray-400 text-xs mt-1">Directing payments technology architecture modernization and high-concurrency systems integration.</p>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Directing payments technology architecture modernization, high-concurrency institutional systems integration, and secure transactional transformation roadmaps.
-                    </p>
+                    <span class="text-gray-400 text-xs font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">ANZ Bank • Melbourne</span>
                 </div>
 
-                <!-- Standard Chartered VC -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 relative">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                        <div>
-                            <span class="text-purple-400 text-xs font-bold uppercase tracking-wider">Venture Building & VC</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Venture Architecture & Technical Leadership</h3>
-                        </div>
-                        <span class="text-gray-400 text-sm font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">Standard Chartered Bank (SC Ventures)</span>
+                <!-- Venture Capital Chief Architect / SC Ventures -->
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-purple-400 text-xs font-bold uppercase tracking-wider">Venture Incubation</span>
+                        <h3 class="text-lg font-bold text-white mt-0.5">Head Architecture & Technical Lead</h3>
+                        <p class="text-gray-400 text-xs mt-1">Led zero-to-one venture incubation across hospitality (Huma), health tech/insurtech (Autumn), enterprise supply chain (TasConnect), and award-winning digital currency rails (Libeara).</p>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Architected and scaled greenfield fintech ventures from inception to deployment, establishing secure technical baselines and scalable banking-as-a-service foundations across multiple international markets.
-                    </p>
+                    <span class="text-gray-400 text-xs font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">SC Ventures by Standard Chartered Bank</span>
                 </div>
 
-                <!-- eBay / PayPal -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 relative">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                        <div>
-                            <span class="text-blue-400 text-xs font-bold uppercase tracking-wider">UI Architecture</span>
-                            <h3 class="text-xl font-bold text-white mt-1">UI Architect</h3>
-                        </div>
-                        <span class="text-gray-400 text-sm font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">eBay / PayPal</span>
+                <!-- Accenture Consulting -->
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-blue-400 text-xs font-bold uppercase tracking-wider">Consulting & Advisory</span>
+                        <h3 class="text-lg font-bold text-white mt-0.5">Enterprise Cloud & Modernization Mgr</h3>
+                        <p class="text-gray-400 text-xs mt-1">Provided high-level architectural consulting for enterprise cloud migrations and systems modernization.</p>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Designed high-throughput, mission-critical user interface systems and global component frameworks supporting massive transactional volumes and secure checkout flows.
-                    </p>
+                    <span class="text-gray-400 text-xs font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">Accenture SEA</span>
                 </div>
 
-                <!-- Yahoo -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 relative">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                        <div>
-                            <span class="text-yellow-400 text-xs font-bold uppercase tracking-wider">Software Engineering</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
-                        </div>
-                        <span class="text-gray-400 text-sm font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">Yahoo</span>
+                <!-- eBay / PayPal & Yahoo -->
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-yellow-400 text-xs font-bold uppercase tracking-wider">Pioneering Scale</span>
+                        <h3 class="text-lg font-bold text-white mt-0.5">UI Architect & Software Engineer</h3>
+                        <p class="text-gray-400 text-xs mt-1">Engineered high-throughput mission-critical user interface systems and global brand platforms at eBay, PayPal, and Yahoo!.</p>
                     </div>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Engineered custom brand products, high-availability web services, and resilient front-end delivery engines for millions of global active users.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Footprint Section -->
-    <section id="global" class="py-24 bg-gray-900/50 border-t border-gray-800/60">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Global Reach & Impact</h2>
-                <p class="text-gray-400">Delivering digital solutions and enterprise architecture across international markets.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="bg-brand-card p-6 rounded-2xl border border-gray-800">
-                    <div class="text-3xl font-bold text-brand-accent mb-2">SG</div>
-                    <div class="text-white font-semibold">Singapore</div>
-                    <div class="text-xs text-gray-400 mt-1">Regional Tech Hubs</div>
-                </div>
-                <div class="bg-brand-card p-6 rounded-2xl border border-gray-800">
-                    <div class="text-3xl font-bold text-brand-accent mb-2">SEA</div>
-                    <div class="text-white font-semibold">Southeast Asia</div>
-                    <div class="text-xs text-gray-400 mt-1">Fintech & Banking Scale</div>
-                </div>
-                <div class="bg-brand-card p-6 rounded-2xl border border-gray-800">
-                    <div class="text-3xl font-bold text-brand-accent mb-2">AMER</div>
-                    <div class="text-white font-semibold">Americas</div>
-                    <div class="text-xs text-gray-400 mt-1">Enterprise Platforms</div>
-                </div>
-                <div class="bg-brand-card p-6 rounded-2xl border border-gray-800">
-                    <div class="text-3xl font-bold text-brand-accent mb-2">MEA</div>
-                    <div class="text-xs text-gray-400 uppercase font-semibold text-white mb-2">Middle East & Africa</div>
-                    <div class="text-xs text-gray-400 mt-1">Venture Expansion</div>
+                    <span class="text-gray-400 text-xs font-medium bg-gray-800 px-3 py-1 rounded-full w-fit">eBay / PayPal / Yahoo!</span>
                 </div>
             </div>
         </div>
@@ -333,14 +425,14 @@
     <footer class="py-12 bg-brand-dark border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
-                <p class="text-white font-semibold">Catherine Basilio</p>
-                <p class="text-xs text-gray-400 mt-1">Lead Architect, Payments Tech - Insto • ANZ Bank • Melbourne</p>
+                <p class="text-white font-semibold">LogiArc • Led by Catherine Basilio</p>
+                <p class="text-xs text-gray-400 mt-1">Specialized Digital Development House • Melbourne, Australia</p>
             </div>
             <div class="flex items-center gap-6">
                 <a href="https://www.linkedin.com/in/cmecholz/" target="_blank" class="text-gray-400 hover:text-white transition text-lg">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:contact@catherinebasilio.com" class="text-gray-400 hover:text-white transition text-lg">
+                <a href="mailto:contact@logiarc.com" class="text-gray-400 hover:text-white transition text-lg">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -386,6 +478,8 @@
             });
         }
 
+        let slideInterval = setInterval(nextSlide, 6000);
+
         function nextSlide() {
             currentIndex = (currentIndex + 1) % totalSlides;
             updateCarousel(currentIndex);
@@ -396,21 +490,15 @@
             updateCarousel(currentIndex);
         }
 
-        function currentSlide(index) {
-            currentIndex = index;
+        function currentSlide(idx) {
+            currentIndex = idx;
             updateCarousel(currentIndex);
         }
 
-        let slideInterval = setInterval(nextSlide, 6000);
-
-        const carouselContainer = document.getElementById('carousel-track');
-        carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
-        carouselContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 6000));
-
         function openModal(src) {
             const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modalImg.src = src;
+            const img = document.getElementById('modalImage');
+            img.src = src;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
